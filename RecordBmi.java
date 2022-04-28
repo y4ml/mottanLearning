@@ -1,6 +1,7 @@
 
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class RecordBmi {
@@ -53,7 +54,7 @@ public class RecordBmi {
             while (sw1 == 0) {
                 System.out.println("身長を入力してください(cm)");
                 try {
-                    height = scanner.nextDouble() / 100;
+                    height = Double.parseDouble(scanner.next()) / 100;
                     sw1 = 1;
                 } catch (Exception e) {
                     //誤った入力を受けた時の処理
@@ -67,12 +68,13 @@ public class RecordBmi {
             while (sw2 == 0) {
                 System.out.println("体重を入力してください(kg)");
                 try {
-                    weight = scanner.nextDouble();
+                    weight = Double.parseDouble(scanner.next());
                     sw2 = 1;
                 } catch (Exception e) {
                     //誤った入力を受けた時の処理
-                    System.out.println("＊＊正しい数値を入力してください＊＊");
+                    System.out.println(e + "＊＊正しい数値を入力してください＊＊");
                     sw2 = 0;
+                    break;
                 }
             }
 
