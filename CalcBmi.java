@@ -1,4 +1,5 @@
 public class CalcBmi {
+
     //BMIを計算するための変数を用意する
     private double weight;
     private double height;

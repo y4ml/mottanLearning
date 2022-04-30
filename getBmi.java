@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class getBmi {
-    public static void main(String args){
-//入力の準備
+    public static void main(String[] args) {
+        //入力の準備
         Scanner scanner = new Scanner(System.in);
 
         //リストの準備
@@ -15,7 +15,6 @@ public class getBmi {
         for (var i = 1;; i++) {
             int sw1 = 0;
             int sw2 = 0;
-            String inputValue;
             double height = 0;
             double weight = 0;
 
